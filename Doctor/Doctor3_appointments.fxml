@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.finalprojdb.Doctor3_Controller">
+    <children>
+        <ImageView fitHeight="294.0" fitWidth="246.0" layoutX="1118.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="1118.0" AnchorPane.rightAnchor="202.0" AnchorPane.topAnchor="299.0">
+            <image>
+                <Image url="https://thumbs.dreamstime.com/z/dentist-word-appointment-cartoon-character-dentist-design-medical-worker-medical-concept-vector-illustration-dentist-179136166.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="218.0" layoutY="5.0" prefHeight="51.0" prefWidth="1234.0" style="-fx-background-color: #b6e2f6;" text=" Booked appointment " AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+        <TableView fx:id="appointmentTable" layoutX="314.0" layoutY="222.0" prefHeight="450.0" prefWidth="744.0">
+            <columns>
+                <TableColumn fx:id="idcol" prefWidth="129.60003662109375" text="Patient ID" />
+                <TableColumn fx:id="namecol" prefWidth="204.79998779296875" text="Patient name" />
+                <TableColumn fx:id="datecol" prefWidth="175.20001220703125" text="Date" />
+                <TableColumn fx:id="timecol" prefWidth="162.40008544921875" text="Time" />
+                <TableColumn fx:id="editCol" maxWidth="70.0" prefWidth="70.0" style="-fx-alignment: center;" text="Edit" />
+            </columns>
+        </TableView>
+        <fx:include fx:id="menu" source="DoctorMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+        <FontAwesomeIconView fx:id="add_new_appointment" fill="#290ed9" glyphName="USER_PLUS" layoutX="314.0" layoutY="200.0" onMouseClicked="#add_new_appointment" size="40" wrappingWidth="22.4000244140625">
+            <font>
+                <Font size="51.0" />
+            </font>
+        </FontAwesomeIconView>
+        <FontAwesomeIconView fx:id="delete" fill="#ea0d0d" glyphName="TRASH_ALT" layoutX="367.0" layoutY="200.0" onMouseClicked="#delete" size="40" wrappingWidth="22.4000244140625">
+            <font>
+                <Font size="51.0" />
+            </font>
+        </FontAwesomeIconView>
+        <FontAwesomeIconView fx:id="search" glyphName="SEARCH" layoutX="458.0" layoutY="200.0" size="40" wrappingWidth="22.4000244140625">
+            <font>
+                <Font size="51.0" />
+            </font>
+        </FontAwesomeIconView>
+        <FontAwesomeIconView fx:id="refresh" fill="#2bb11c" glyphName="REFRESH" layoutX="410.0" layoutY="200.0" onMouseClicked="#refresh" size="40" wrappingWidth="22.4000244140625">
+            <font>
+                <Font size="51.0" />
+            </font>
+        </FontAwesomeIconView>
+        <TextField fx:id="search_tf" layoutX="505.0" layoutY="172.0" prefHeight="26.0" prefWidth="207.0" />
+
+    </children>
+</AnchorPane>
