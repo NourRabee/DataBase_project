@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.finalprojdb.Doctor2_Controller">
+    <children>
+        <Label layoutX="218.0" prefHeight="118.0" prefWidth="1303.0" style="-fx-background-color: #b6e2f6;" text="     Clinic Patients" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+        <TableView fx:id="patientTable" layoutX="330.0" layoutY="197.0" prefHeight="502.0" prefWidth="1122.0">
+            <columns>
+                <TableColumn fx:id="idcol" prefWidth="112.80001831054688" text="Patient ID" />
+                <TableColumn fx:id="namecol" minWidth="2.4000244140625" prefWidth="183.99993896484375" text="Patient name" />
+                <TableColumn fx:id="phonecol" prefWidth="128.7999267578125" text="Phone" />
+                <TableColumn fx:id="emailcol" minWidth="0.0" prefWidth="209.59991455078125" text="Email" />
+                <TableColumn fx:id="addcol" prefWidth="143.2000732421875" text="Address" />
+                <TableColumn fx:id="birthcol" prefWidth="104.0" text="Date of birth" />
+                <TableColumn fx:id="agecol" prefWidth="62.400146484375" text="Age" />
+                <TableColumn fx:id="bloodcol" prefWidth="75.9998779296875" text="Blood Type" />
+                <TableColumn fx:id="allergycol" prefWidth="98.40000000000009" text="Allergy" />
+                <TableColumn fx:id="allergycol1" prefWidth="144.7999267578125" />
+            </columns>
+        </TableView>
+        <fx:include fx:id="menu" source="DoctorMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+        <HBox layoutX="330.0" layoutY="149.0" prefHeight="50.0" prefWidth="475.0">
+            <children>
+                <FontAwesomeIconView fx:id="insert_icon" fill="#0009ff" glyphName="USER_PLUS" onMouseClicked="#insert_MouseClicked" size="40" text="" wrappingWidth="64.00006103515625" />
+                <FontAwesomeIconView fx:id="delete_icon" fill="#d40808" glyphName="TRASH_ALT" onMouseClicked="#delete_MouseClicked" size="40" text="" wrappingWidth="57.028608322143555" />
+                <FontAwesomeIconView fx:id="edit_icon" glyphName="EDIT" onMouseClicked="#edit_MouseClicked" size="40" text="" wrappingWidth="60.0" />
+                <FontAwesomeIconView fx:id="refresh" fill="#17cc54" glyphName="REFRESH" onMouseClicked="#refresh_MouseClicked" size="40" wrappingWidth="64.68573760986328" />
+                <FontAwesomeIconView fx:id="search_icon" glyphName="SEARCH" size="40" text="" wrappingWidth="39.54288101196289" />
+                <TextField fx:id="search_tf" prefHeight="28.0" prefWidth="190.0">
+                    <HBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                    </HBox.margin></TextField>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
