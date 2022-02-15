@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.finalprojdb.Doctor5_Controller">
+    <children>
+        <ImageView fitHeight="356.0" fitWidth="298.0" layoutX="1238.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.993011474609375" AnchorPane.leftAnchor="1238.0" AnchorPane.rightAnchor="1.599999999999909" AnchorPane.topAnchor="443.0">
+            <image>
+                <Image url="https://cdn2.vectorstock.com/i/1000x1000/93/11/doctor-woman-and-patient-vector-21229311.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="218.0" layoutY="5.0" prefHeight="51.0" prefWidth="1234.0" style="-fx-background-color: #b6e2f6;" text="   Write Prescription" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+        <GridPane layoutX="291.0" layoutY="171.0" prefHeight="180.0" prefWidth="521.0">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.8000244140625" minWidth="10.0" prefWidth="207.19998779296873" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.6000244140625" minWidth="10.0" prefWidth="316.8000122070313" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="58.20004860828125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID:" wrappingWidth="214.13665771484375" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine:" wrappingWidth="154.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="tf_pid" prefHeight="41.0" prefWidth="397.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="22.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="tf_MedicineCode" prefHeight="16.0" prefWidth="320.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arabic Typesetting" size="22.0" />
+                    </font>
+                </TextField>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosage:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="tf_dosage" prefHeight="43.0" prefWidth="317.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            </children>
+        </GridPane>
+        <TableView fx:id="writePrescriptionTable" layoutX="272.0" layoutY="495.0" prefHeight="234.0" prefWidth="748.0">
+            <columns>
+                <TableColumn fx:id="MCodeCol" prefWidth="96.800048828125" text="Medicine code" />
+                <TableColumn fx:id="MnameCol" prefWidth="125.5999755859375" text="Medicine name" />
+                <TableColumn fx:id="effectSideCol" prefWidth="199.99993896484375" text="Effect_side" />
+                <TableColumn fx:id="interactionsCol" prefWidth="238.40008544921875" text="Interactions" />
+                <TableColumn fx:id="costCol" prefWidth="86.4000244140625" text="Cost" />
+            </columns>
+        </TableView>
+        <Text layoutX="289.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicines in the clinic :" wrappingWidth="347.20001220703125">
+            <font>
+                <Font name="Arabic Typesetting" size="28.0" />
+            </font>
+        </Text>
+        <Button layoutX="529.0" layoutY="388.0" mnemonicParsing="false" onAction="#insert_ButtonClicked" prefHeight="43.0" prefWidth="96.0" text="INSERT">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <fx:include source="DoctorMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+        <Button fx:id="clear" layoutX="646.0" layoutY="388.0" mnemonicParsing="false" onAction="#clear_ButtonClicked" prefHeight="43.0" prefWidth="96.0" text="CLEAR">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
