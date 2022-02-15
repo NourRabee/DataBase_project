@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.finalprojdb.Doctor6_Controller">
+    <children>
+        <ImageView fitHeight="356.0" fitWidth="298.0" layoutX="1238.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.993011474609375" AnchorPane.leftAnchor="1238.0" AnchorPane.rightAnchor="1.599999999999909" AnchorPane.topAnchor="443.0">
+            <image>
+                <Image url="https://cdn2.vectorstock.com/i/1000x1000/93/11/doctor-woman-and-patient-vector-21229311.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="218.0" layoutY="5.0" prefHeight="51.0" prefWidth="1234.0" style="-fx-background-color: #b6e2f6;" text=" Transfer to laboratories" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="218.5" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+        <fx:include source="DoctorMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+        <TabPane layoutX="231.0" layoutY="100.0" prefHeight="748.0" prefWidth="1348.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-48.0" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="-13.0" AnchorPane.topAnchor="100.0">
+            <tabs>
+                <Tab fx:id="write_Request" text="Write a request for a test">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Text layoutX="78.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write a request for a test" wrappingWidth="405.33673095703125">
+                                    <font>
+                                        <Font name="Arabic Typesetting" size="39.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="79.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Examinations offered by the clinic :" wrappingWidth="470.4000244140625">
+                                    <font>
+                                        <Font name="Arabic Typesetting" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Button fx:id="save1_button" layoutX="197.0" layoutY="215.0" mnemonicParsing="false" onAction="#Save1_buttonClicked" prefHeight="33.0" prefWidth="94.0" text="Save">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="clear1_button" layoutX="307.0" layoutY="215.0" mnemonicParsing="false" onAction="#clear1_buttonClicked" prefHeight="33.0" prefWidth="94.0" text="Clear">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <TableView fx:id="LabRequestTableView" layoutX="116.0" layoutY="363.0" prefHeight="234.0" prefWidth="490.0">
+                                    <columns>
+                                        <TableColumn fx:id="testCodeCol" prefWidth="96.79998779296875" text="Test code" />
+                                        <TableColumn fx:id="testNameCol" prefWidth="136.800048828125" text="Test name" />
+                                        <TableColumn fx:id="testReqCol" prefWidth="176.79998779296875" text="Test Requirements" />
+                                        <TableColumn fx:id="testCostCol" prefWidth="83.99993896484375" text="Cost" />
+                                    </columns>
+                                </TableView>
+                                <GridPane layoutX="110.0" layoutY="80.0" prefHeight="102.0" prefWidth="434.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.8000244140625" minWidth="10.0" prefWidth="129.80003662109374" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.6000244140625" minWidth="10.0" prefWidth="332.9999633789063" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints />
+                                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="58.20004860828125" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID:" wrappingWidth="214.13665771484375" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="28.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="tf_pid1" prefHeight="44.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="22.0" />
+                                            </font>
+                                        </TextField>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Test code:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="28.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="tf_testCode" prefHeight="44.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    </children>
+                                </GridPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Write the result">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Text layoutX="50.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write the result" wrappingWidth="405.33673095703125">
+                                    <font>
+                                        <Font name="Arabic Typesetting" size="39.0" />
+                                    </font>
+                                </Text>
+                                <Button fx:id="save2_button" layoutX="125.0" layoutY="411.0" mnemonicParsing="false" onAction="#Save2_buttonClicked" prefHeight="33.0" prefWidth="94.0" text="Save">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="clear2_button" layoutX="230.0" layoutY="411.0" mnemonicParsing="false" onAction="#clear2_buttonClicked" prefHeight="33.0" prefWidth="94.0" text="Clear">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <GridPane layoutX="69.0" layoutY="91.0" prefHeight="254.0" prefWidth="491.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.8000244140625" minWidth="10.0" prefWidth="147.60001220703126" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.6000244140625" minWidth="10.0" prefWidth="320.3999877929688" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="0.0" />
+                                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="56.4" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID:" wrappingWidth="130.13671875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="28.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="tf_pid2" prefHeight="38.0" prefWidth="336.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="150.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="28.0" />
+                                            </font>
+                                        </Text>
+                                        <DatePicker fx:id="tf_Date" prefHeight="38.0" prefWidth="334.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Test Name:" wrappingWidth="150.13671875" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="28.0" />
+                                            </font>
+                                        </Text>
+                                        <Label fx:id="L_testName" prefHeight="34.0" prefWidth="332.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="28.0" />
+                                            </font>
+                                        </Label>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date of payment:" wrappingWidth="150.13671875" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="28.0" />
+                                            </font>
+                                        </Text>
+                                        <DatePicker fx:id="tf_dateOfPayment" prefHeight="40.0" prefWidth="332.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                        <TextField fx:id="tf_result" prefHeight="41.0" prefWidth="320.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Test Result:" wrappingWidth="147.7366943359375" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                            <font>
+                                                <Font name="Arabic Typesetting" size="28.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </GridPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
