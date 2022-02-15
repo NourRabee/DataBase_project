@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.finalprojdb.Doctor7_Controller">
+    <children>
+        <ImageView fitHeight="356.0" fitWidth="298.0" layoutX="1238.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.993011474609375" AnchorPane.leftAnchor="1238.0" AnchorPane.rightAnchor="1.599999999999909" AnchorPane.topAnchor="443.0">
+            <image>
+                <Image url="https://cdn2.vectorstock.com/i/1000x1000/93/11/doctor-woman-and-patient-vector-21229311.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="218.0" layoutY="5.0" prefHeight="51.0" prefWidth="1234.0" style="-fx-background-color: #b6e2f6;" text="   External Transfer" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="218.5" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+        <GridPane layoutX="290.0" layoutY="158.0" prefHeight="269.0" prefWidth="471.0">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.20001220703125" minWidth="10.0" prefWidth="92.8000244140625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.6000244140625" minWidth="10.0" prefWidth="246.99997558593745" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="58.20004860828125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID:" wrappingWidth="170.9366455078125" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:" wrappingWidth="154.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="154.13671875" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Time:" wrappingWidth="154.13671875" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="tf_pid" prefHeight="16.0" prefWidth="210.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="22.0" />
+                    </font>
+                </TextField>
+                <DatePicker fx:id="tf_Date" prefHeight="47.0" prefWidth="316.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Examination type:" wrappingWidth="154.13671875" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="tf_ExaminationType" prefHeight="46.0" prefWidth="314.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Arabic Typesetting" size="22.0" />
+                    </font>
+                </TextField>
+                <ChoiceBox fx:id="choiceBoxTime" prefHeight="44.0" prefWidth="314.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <TextField fx:id="tf_hospital" prefHeight="46.0" prefWidth="206.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arabic Typesetting" size="22.0" />
+                    </font>
+                </TextField>
+            </children>
+        </GridPane>
+        <fx:include source="DoctorMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+        <Button fx:id="insert" layoutX="329.0" layoutY="491.0" mnemonicParsing="false" onAction="#insert_buttonClicked" prefHeight="46.0" prefWidth="130.0" text="Insert">
+            <font>
+                <Font name="Arabic Typesetting" size="25.0" />
+            </font>
+        </Button>
+        <Button fx:id="clear" layoutX="481.0" layoutY="491.0" mnemonicParsing="false" onAction="#clear_buttonClicked" prefHeight="46.0" prefWidth="130.0" text="Clear">
+            <font>
+                <Font name="Arabic Typesetting" size="25.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
