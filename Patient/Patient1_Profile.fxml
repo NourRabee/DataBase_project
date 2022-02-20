@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.finalprojdb.Patient1_Controller">
+    <children>
+        <Label fx:id="hello" layoutX="246.0" layoutY="131.0" prefHeight="32.0" prefWidth="580.0" text="Your informations :" AnchorPane.bottomAnchor="611.8" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="724.4000000000001" AnchorPane.topAnchor="144.99301147460943">
+            <font>
+                <Font name="Arabic Typesetting" size="32.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="356.0" fitWidth="298.0" layoutX="1238.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.993011474609375" AnchorPane.leftAnchor="1238.0" AnchorPane.rightAnchor="1.599999999999909" AnchorPane.topAnchor="443.0">
+            <image>
+                <Image url="https://cdn2.vectorstock.com/i/1000x1000/93/11/doctor-woman-and-patient-vector-21229311.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="229.0" layoutY="5.0" prefHeight="118.0" prefWidth="1321.0" style="-fx-background-color: #b6e2f6;" text=" Profile" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="218.5" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Arabic Typesetting" size="77.0" />
+            </font>
+        </Label>
+        <Button fx:id="B_signOut" layoutX="302.0" layoutY="720.0" mnemonicParsing="false" onAction="#signOut_buttonClicked" prefHeight="52.0" prefWidth="101.0" text="Sign out">
+            <font>
+                <Font name="Arabic Typesetting" size="27.0" />
+            </font>
+        </Button>
+        <GridPane layoutX="295.0" layoutY="204.0" prefHeight="356.0" prefWidth="658.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.79998779296875" minWidth="10.0" prefWidth="105.9999755859375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="560.0000244140625" minWidth="10.0" prefWidth="560.0000244140625" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" wrappingWidth="97.33673095703125">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone :" wrappingWidth="101.3367919921875" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" wrappingWidth="100.5367431640625" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" wrappingWidth="100.53668212890625" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth :" wrappingWidth="102.93670654296875" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blood type :" wrappingWidth="99.7366943359375" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Allergy :" wrappingWidth="101.33673095703125" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Text>
+                <Label fx:id="L_name" prefHeight="44.0" prefWidth="547.0" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="L_phone" prefHeight="44.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="L_address" prefHeight="44.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="L_email" prefHeight="44.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="L_birth" prefHeight="44.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="L_blood" prefHeight="44.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="L_allergy" prefHeight="44.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="Arabic Typesetting" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <fx:include source="PatientMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+    </children>
+</AnchorPane>
