@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.finalprojdb.Patient4_Controller">
+    <children>
+        <Label layoutX="229.0" layoutY="5.0" prefHeight="115.0" prefWidth="1321.0" style="-fx-background-color: #b6e2f6;" text=" Patient's History" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="229.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Arabic Typesetting" size="77.0" />
+            </font>
+        </Label>
+        <fx:include source="PatientMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+        <TabPane layoutX="230.0" layoutY="103.0" prefHeight="682.0" prefWidth="1355.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Patient's History">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="TableView" layoutX="17.0" layoutY="78.0" prefHeight="518.0" prefWidth="1168.0">
+                                    <columns>
+                                        <TableColumn fx:id="colDoctorId" prefWidth="94.39996337890625" text="Doctor ID" />
+                                        <TableColumn fx:id="colDoctorName" prefWidth="181.59991455078125" text="Doctor name" />
+                                        <TableColumn fx:id="colSpecialty" prefWidth="171.20001220703125" text="Doctor specialty" />
+                                        <TableColumn fx:id="colDate" prefWidth="125.5999755859375" text="Date" />
+                                        <TableColumn fx:id="colTime" prefWidth="87.9998779296875" text="Time" />
+                                        <TableColumn fx:id="colDiagnosis" prefWidth="211.199951171875" text="Diagnosis" />
+                                        <TableColumn fx:id="colTreatment" prefWidth="294.4000244140625" text="Treatment" />
+                                    </columns>
+                                </TableView>
+                                <FontAwesomeIconView glyphName="SEARCH" layoutX="29.0" layoutY="58.0" size="40" />
+                                <TextField fx:id="tf_search1" layoutX="79.0" layoutY="28.0" prefHeight="30.0" prefWidth="246.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Search for lab result">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <FontAwesomeIconView glyphName="SEARCH" layoutX="34.0" layoutY="80.0" size="40" />
+                                <TextField fx:id="tf_search" layoutX="79.0" layoutY="50.0" prefHeight="30.0" prefWidth="406.0" />
+                                <TableView fx:id="LabResultTable" layoutX="41.0" layoutY="118.0" prefHeight="326.0" prefWidth="707.0">
+                                    <columns>
+                                        <TableColumn fx:id="colDate1" prefWidth="129.60003662109375" text="Date" />
+                                        <TableColumn fx:id="colTime1" prefWidth="107.199951171875" text="Time" />
+                                        <TableColumn fx:id="colLabTestName" prefWidth="184.800048828125" text="The name of the lab test" />
+                                        <TableColumn fx:id="colLabTestResult" prefWidth="284.8000244140626" text="Result" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
