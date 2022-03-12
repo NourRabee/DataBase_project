@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalprojdb.Patient5_Controller">
+    <children>
+        <ImageView fitHeight="356.0" fitWidth="298.0" layoutX="1238.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.993011474609375" AnchorPane.leftAnchor="1238.0" AnchorPane.rightAnchor="1.599999999999909" AnchorPane.topAnchor="443.0">
+            <image>
+                <Image url="https://cdn2.vectorstock.com/i/1000x1000/93/11/doctor-woman-and-patient-vector-21229311.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="227.0" layoutY="5.0" prefHeight="115.0" prefWidth="1323.0" style="-fx-background-color: #b6e2f6;" text=" Reset password" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="227.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Arabic Typesetting" size="77.0" />
+            </font>
+        </Label>
+        <Label layoutX="284.0" layoutY="165.0" prefHeight="34.0" prefWidth="114.0" text="Old password :">
+            <font>
+                <Font name="Arabic Typesetting" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tf_oldpass" layoutX="473.0" layoutY="169.0" prefHeight="26.0" prefWidth="150.0" />
+        <Label layoutX="283.0" layoutY="202.0" prefHeight="34.0" prefWidth="114.0" text="New password :">
+            <font>
+                <Font name="Arabic Typesetting" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="283.0" layoutY="240.0" text="Password confirmation :">
+            <font>
+                <Font name="Arabic Typesetting" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tf_newpass" layoutX="474.0" layoutY="206.0" prefHeight="26.0" prefWidth="150.0" />
+        <Button fx:id="changeButton" layoutX="357.0" layoutY="358.0" mnemonicParsing="false" onAction="#resetPW_ButtonClicked" prefHeight="41.0" prefWidth="160.0" text="Change confirmation">
+            <font>
+                <Font name="Arabic Typesetting" size="20.0" />
+            </font>
+        </Button>
+        <TextField fx:id="tf_new2" layoutX="474.0" layoutY="244.0" prefHeight="26.0" prefWidth="150.0" />
+        <fx:include source="PatientMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+        <Label fx:id="result" layoutX="305.0" layoutY="312.0" prefHeight="26.0" prefWidth="379.0" />
+    </children>
+</AnchorPane>
