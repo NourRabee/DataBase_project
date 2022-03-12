@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="619.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="356.0" fitWidth="298.0" layoutX="1238.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.993011474609375" AnchorPane.leftAnchor="1238.0" AnchorPane.rightAnchor="1.599999999999909" AnchorPane.topAnchor="443.0">
+            <image>
+                <Image url="https://cdn2.vectorstock.com/i/1000x1000/93/11/doctor-woman-and-patient-vector-21229311.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="228.0" layoutY="5.0" prefHeight="115.0" prefWidth="1322.0" style="-fx-background-color: #b6e2f6;" text=" Contact Informations" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Arabic Typesetting" size="77.0" />
+            </font>
+        </Label>
+        <GridPane layoutX="277.0" layoutY="154.0" prefHeight="184.0" prefWidth="578.0">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.20001220703125" minWidth="10.0" prefWidth="142.40001220703124" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.99998779296874" minWidth="10.0" prefWidth="439.99998779296874" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="58.20004860828125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" wrappingWidth="154.13671875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" wrappingWidth="154.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="154.13671875" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Text>
+                <Label prefHeight="29.0" prefWidth="358.0" text=" 0592982001" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="29.0" prefWidth="358.0" text=" 022982151" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="29.0" prefWidth="358.0" text=" director.meds@birzeit.edu" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arabic Typesetting" size="28.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <fx:include source="PatientMenu.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1320.0" AnchorPane.topAnchor="0.0" />
+    </children>
+</AnchorPane>
